@@ -86,8 +86,12 @@ class DoublyLinkedList {
     return count;
   }
 
-  clean() {
-    throw new Error("TODO RETO: Implementar clean() en DoublyLinkedList.");
+ clean() {
+    let removedCount = this._size; 
+    while (!this.isEmpty()) {     
+      this.removeFirst();          
+    }
+    return removedCount;
   }
 
   reverseInPlace() {
